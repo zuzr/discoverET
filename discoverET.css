@@ -1,0 +1,110 @@
+.navbar {
+  background-color: #240090;
+}
+
+.nav-item {
+  font-family: 'Oswald', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  color: #f8f8ff;
+  padding: 1em;
+}
+
+.main-container {
+  margin: auto;
+  position: relative;
+  background-color: #0c0032;
+}
+
+content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 2em;
+  padding-right: 2em;
+  background-color: #0c0032;
+}
+
+.title-spacer {
+  height: 4em;
+}
+
+.title {
+  font-family: 'Oswald', sans-serif;
+  font-style: normal;
+  color: #f8f8ff;
+}
+
+img {
+  max-width: 70%;
+}
+
+/* put at bottom after adding welcome page */
+.spacer {
+  height: 100em;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+  table {
+    max-width: 100%;
+    padding-top: 4em
+  }
+  .title {
+    font-weight: 500;
+    font-size: 36px;
+  }
+  .blurb {
+    font-weight: 300;
+    font-size: 14px;
+  }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  table {
+    max-width: 600px;
+    padding-top: 6em
+  }
+  .title {
+    font-weight: 600;
+    font-size: 72px;
+  }
+  .blurb {
+    font-weight: 400;
+    font-size: 20px;
+  }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+  table {
+    max-width: 800px;
+    padding-top: 6em
+  }
+  .title {
+    font-weight: 600;
+    font-size: 96px;
+  }
+  .blurb {
+    font-weight: 500;
+    font-size: 22px;
+  }
+}
+
+.blurb {
+  font-family: 'Merriweather-Sans', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #f8f8ff;
+}
+
+@keyframes Spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
