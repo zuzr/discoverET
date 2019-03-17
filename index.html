@@ -22,25 +22,21 @@
   <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <a class="navbar-brand title" href="#">DiscoverET</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse"
         data-target="#navbarContent" aria-controls="navbarContent"
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand title" href="#Sun">DiscoverET</a>
       <div class="collapse navbar-collapse justify-content-center"
         id="navbarContent">
         <ul class="navbar-nav body-text">
-          <li><a class="nav-item" href="#Mercury">Terrestrials</a>
+          <li><a class="nav-item" href="#Mercury">[Terrestrials]</a>
           </li>
-          <li>|</li>
-          <li><a class="nav-item" href="#Jupiter">Gas Giants</a></li>
-          <li>|</li>
-          <li><a class="nav-item" href="#Uranus">Ice Giants</a></li>
-          <li>|</li>
-          <li><a class="nav-item" href="#Pluto">Outer Orbit</a></li>
-          <li>|</li>
-          <li><a class="nav-item" href="#Exoplanets">Exoplanets</a>
+          <li><a class="nav-item" href="#Jupiter">[Gas Giants]</a></li>
+          <li><a class="nav-item" href="#Uranus">[Ice Giants]</a></li>
+          <li><a class="nav-item" href="#Pluto">[Outer Orbit]</a></li>
+          <li><a class="nav-item" href="#Exoplanets">[Exoplanets]</a>
           </li>
         </ul>
       </div>
@@ -58,6 +54,7 @@
             esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
             cupidatat non proident, sunt in culpa qui officia deserunt mollit
             anim id est laborum.</p>
+          <P class="body-text">SETI:</P>
           <button class="btn body-text">
             <a href="https://seti.org/about-us/mission">Learn More</a>
           </button>
@@ -119,10 +116,13 @@
           "<td>" + f.past_et_likelihood + "</td>"
           + "</tr>" +
 
-          "<tr>" + "<td colspan='4'>" + f.blurb + "</tr>" +
+          "<tr>" + "<td colspan='4'>" + f.blurb + "</tr>"
 
-          "<tr>" + "<td class='spacer'>" + "</td>" + "</tr>"
+        if (f.id != "Exoplanets") {
+          tbl += "<tr>" + "<td class='spacer'>" + "</td>" + "</tr>"
+        }
         $(tbl).appendTo("#content tbody");
+
       });
 
     });
