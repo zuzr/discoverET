@@ -12,34 +12,61 @@
     crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans|Oswald"
     rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Montserrat|Nova+Mono|Share+Tech+Mono"
+    rel="stylesheet">
 </head>
 
 <main>
 
   <body>
 
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <button class="navbar-toggler" type="button" data-toggle="collapse"
         data-target="#navbarContent" aria-controls="navbarContent"
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="/DiscoverET">DiscoverET</a>
+      <a class="navbar-brand title" href="#Sun">DiscoverET</a>
       <div class="collapse navbar-collapse justify-content-center"
         id="navbarContent">
-        <ul class="navbar-nav">
-          <li><a class="nav-item" href="#Mercury">Terrestrials</a></li>
+        <ul class="navbar-nav body-text">
+          <li><a class="nav-item" href="#Mercury">Terrestrials</a>
+          </li>
+          <li>|</li>
           <li><a class="nav-item" href="#Jupiter">Gas Giants</a></li>
+          <li>|</li>
           <li><a class="nav-item" href="#Uranus">Ice Giants</a></li>
+          <li>|</li>
           <li><a class="nav-item" href="#Pluto">Outer Orbit</a></li>
-          <li><a class="nav-item" href="#Exoplanets">Exoplanets</a></li>
+          <li>|</li>
+          <li><a class="nav-item" href="#Exoplanets">Exoplanets</a>
+          </li>
         </ul>
       </div>
     </nav>
 
     <container class="main-container">
       <content>
-        <table id="content" class="blurb">
+        <div class="jumbotron">
+          <h1 class="title">Welcome to DiscoverET</h1>
+          <p class="body-text">Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+            cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum.</p>
+          <button class="btn body-text">
+            <a href="https://seti.org/about-us/mission">Learn More</a>
+          </button>
+          <button class="btn body-text">
+            <a href="https://seti.org/donate">Donate</a>
+          </button>
+        </div>
+        <div class="spacer"></div>
+        <table id="content" class="table table-responsive-md body-text">
           <tbody></tbody>
         </table>
       </content>
@@ -49,6 +76,12 @@
 
 <script
   src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+
+<script
+  src="http://flesler-plugins.googlecode.com/files/jquery.scrollTo-1.4.2-min.js"></script>
+
+<script
+  src="http://flesler-plugins.googlecode.com/files/jquery.localscroll-1.2.7-min.js"></script>
 
 <script
   src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
@@ -67,9 +100,11 @@
 
     $.getJSON('content.json', function (data) {
       $.each(data.content, function (i, f) {
-        var tbl = "<tr>" + "<td class='title-spacer' id=" + f.id + ">" + "</td>" + "</tr>" +
+        var tbl =
 
-          "<tr class='title'>" + "<td colspan='4' align='center'>" + "<p class='title'>" + f.name + "</p>" + "</td>" + "</tr>" +
+          "<tr>" + "<td colspan='4' class='title-spacer' id=" + f.id + ">" + "</td>" + "</tr>" +
+
+          "<tr id=" + f.id + " class='title'>" + "<td class='title' colspan='4' align='center'>" + "<p>" + f.name + "</p>" + "</td>" + "</tr>" +
 
           "<tr>" + "<td colspan='2' rowspan='6' align='center'>" +
           "<img src=" + f.image + " alt=" + f.id + ">" + "</td>" +
@@ -92,6 +127,12 @@
 
     });
 
+  });
+</script>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('#nav').localScroll({ duration: 1000 });
   });
 </script>
 

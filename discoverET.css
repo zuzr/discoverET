@@ -1,11 +1,9 @@
 .navbar {
-  background-color: #240090;
+  background-color: #0c0032;
 }
 
 .nav-item {
-  font-family: 'Oswald', sans-serif;
-  font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 20px;
   color: #f8f8ff;
   padding: 1em;
@@ -23,21 +21,33 @@ content {
   align-items: center;
   padding-left: 2em;
   padding-right: 2em;
+  overflow-x: auto;
   background-color: #0c0032;
 }
 
+.jumbotron {
+  margin-top: 6em;
+  height: 100%;
+  width: 100%;
+  color: #f8f8ff;
+  background-color: #3500D3 !important;
+}
+
 .title-spacer {
-  height: 4em;
+  height: 2em;
 }
 
 .title {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Major Mono Display', monospace;
   font-style: normal;
+  font-weight: 200;
   color: #f8f8ff;
 }
 
-img {
-  max-width: 70%;
+.body-text {
+  font-family: 'Share Tech Mono', monospace;
+  font-style: normal;
+  color: #f8f8ff;
 }
 
 /* put at bottom after adding welcome page */
@@ -49,13 +59,16 @@ img {
 @media only screen and (max-width: 400px) {
   table {
     max-width: 100%;
-    padding-top: 4em
+    margin-top: 4em;
   }
   .title {
-    font-weight: 500;
-    font-size: 36px;
+    font-weight: 400;
+    font-size: 24px;
   }
-  .blurb {
+  img {
+    max-height: 40%;
+  }
+  .body-text {
     font-weight: 300;
     font-size: 14px;
   }
@@ -65,13 +78,16 @@ img {
 @media only screen and (min-width: 401px) and (max-width: 960px) {
   table {
     max-width: 600px;
-    padding-top: 6em
+    padding-top: 6em;
   }
   .title {
-    font-weight: 600;
-    font-size: 72px;
+    font-weight: 500;
+    font-size: 36px;
   }
-  .blurb {
+  img {
+    max-height: 40%;
+  }
+  .body-text {
     font-weight: 400;
     font-size: 20px;
   }
@@ -81,23 +97,19 @@ img {
 @media only screen and (min-width: 961px) {
   table {
     max-width: 800px;
-    padding-top: 6em
+    padding-top: 6em;
   }
   .title {
-    font-weight: 600;
-    font-size: 96px;
+    font-weight: 400;
+    font-size: 72px;
   }
-  .blurb {
-    font-weight: 500;
+  img {
+    max-height: 40%;
+  }
+  .body-text {
+    font-weight: 400;
     font-size: 22px;
   }
-}
-
-.blurb {
-  font-family: 'Merriweather-Sans', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  color: #f8f8ff;
 }
 
 @keyframes Spin {
