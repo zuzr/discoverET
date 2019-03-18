@@ -30,12 +30,9 @@ content {
   flex-direction: column;
   align-items: center;
   overflow-x: auto;
-  background-color: #0c0032;
-}
-
-content {
   padding-left: 2em;
   padding-right: 2em;
+  background-color: #0c0032;
 }
 
 .jumbotron {
