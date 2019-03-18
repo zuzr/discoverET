@@ -100,6 +100,10 @@ img {
   .jumbotron {
     margin-top: 6em;
   }
+  .row {
+    margin-left: 4em;
+    margin-right: 4em;
+  }
   .title {
     font-weight: 700;
     font-size: 36px;
@@ -114,6 +118,10 @@ img {
 @media only screen and (min-width: 961px) {
   .jumbotron {
     margin-top: 6em;
+  }
+  .row {
+    margin-left: 4em;
+    margin-right: 4em;
   }
   .title {
     font-weight: 800;
