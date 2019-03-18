@@ -31,16 +31,15 @@
       <div class="collapse navbar-collapse justify-content-center"
         id="navbarContent">
         <ul class="navbar-nav body-text">
-          <li><a class="nav-item" onclick="goToID('#Mercury');">Terrestrials</a>
+          <li><a class="nav-item" href="#Mercury">Terrestrials</a>
           </li>
-          <li><a class="nav-item" onclick="goToID('#Jupiter');">Gas Giants</a>
+          <li><a class="nav-item" href="#Jupiter">Gas Giants</a>
           </li>
-          <li><a class="nav-item" onclick="goToID('#Uranus');">Ice Giants</a>
+          <li><a class="nav-item" href="#Uranus">Ice Giants</a>
           </li>
-          <li><a class="nav-item" onclick="goToID('#Pluto');">Outer Orbit</a>
+          <li><a class="nav-item" href="#Pluto">Outer Orbit</a>
           </li>
-          <li><a class="nav-item"
-              onclick="goToID('#Exoplanets');">Exoplanets</a>
+          <li><a class="nav-item" href="#Exoplanets">Exoplanets</a>
           </li>
         </ul>
       </div>
@@ -67,9 +66,9 @@
           </button>
         </div>
         <div class="spacer"></div>
-        <table id="content" class="table table-responsive-md body-text">
-          <tbody></tbody>
-        </table>
+        <div id="content">
+          <planets class="body-text"></planets>
+        </div>
       </content>
     </container>
   </body>
@@ -88,35 +87,125 @@
   integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
   crossorigin="anonymous"></script>
 
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
 
-
+<!-- compile json data into bootstrap grid -->
 <script>
   $(function () {
 
     $.getJSON('content.json', function (data) {
       $.each(data.content, function (i, f) {
         var tbl =
-          "<tr class='title'>" + "<td class='title' colspan='4' align='center'>" + "<p>" + f.name + "</p>" + "</td>" + "</tr>" +
+          // row 1
+          "<div class='row' id=" + f.id + ">" +
+          "<div class='title col-12' align='center'>" +
+          "<p>" + f.name + "</p>" +
+          "</div>" +
+          "</div>" +
+          // end row 1
 
-          "<tr>" + "<td colspan='2' rowspan='6' align='center'>" +
-          "<img id=" + f.id + " src=" + f.image + " alt=" + f.id + ">" + "</td>" +
+          // row 2
+          "<div class='row row-no-padding'>" +
 
-          "<td>" + "Distance:" + "</td>" +
-          "<td>" + f.distance + " Mkm" + "</td>" + "</tr>" + "<tr>" + "<td>" + "Volume:" + "</td>" +
-          "<td>" + f.volume + " Earths" + "</td>"
-          + "</tr>" + "<tr>" + "<td>" + "Surface Temp:" + "</td>" +
-          "<td>" + f.avg_temp + " C" + "</td>"
-          + "</tr>" + "<tr>" + "<td>" + "Type:" + "</td>" +
-          "<td>" + f.type + "</td>" + "</tr>" + "<tr>" + "<td>" + "Current ET Potential:" + "</td>" + "<td>" + f.current_et_likelihood + "</td>" + "</tr>" + "<tr>" + "<td>" + "Past ET Potential:" + "</td>" +
-          "<td>" + f.past_et_likelihood + "</td>"
-          + "</tr>" +
+          // img col
+          "<div class='img-container col-xs-12 col-sm-6' align='center'>" +
+          "<img class='Spin' src=" + f.image + " alt=" + f.id + ">" +
+          "</div>" +
 
-          "<tr>" + "<td colspan='4'>" + f.blurb + "</tr>"
+          // stats col
+          "<div class='col-xs-12 col-sm-6' align='center'>" +
 
+          // row 2.1
+          "<div class='row'>" +
+          "<div class='col-6'>" +
+          "Distance:" +
+          "</div>" +
+          "<div class='col-6'>" +
+          f.distance + " Mkm" +
+          "</div>" +
+          "</div>" +
+          // end row 2.1
+
+          // row 2.2
+          "<div class='row row-border'>" +
+          "<div class='col-6'>" +
+          "Volume:" +
+          "</div>" +
+          "<div class='col-6'>" +
+          f.volume + " Earths" +
+          "</div>" +
+          "</div>" +
+          // end row 2.2
+
+          // row 2.3
+          "<div class='row row-border'>" +
+          "<div class='col-6'>" +
+          "Surface Temp:" +
+          "</div>" +
+          "<div class='col-6'>" +
+          f.avg_temp + " C" +
+          "</div>" +
+          "</div>" +
+          // end row 2.3
+
+          // row 2.4
+          "<div class='row row-border'>" +
+          "<div class='col-6'>" +
+          "Type:" +
+          "</div>" +
+          "<div class='col-6'>" +
+          f.type +
+          "</div>" +
+          "</div>" +
+          // end row 2.4
+
+          // row 2.5
+          "<div class='row row-border'>" +
+          "<div class='col-6'>" +
+          "Current ET Potential:" +
+          "</div>" +
+          "<div class='col-6'>" +
+          f.current_et_likelihood +
+          "</div>" +
+          "</div>" +
+          // end row 2.5
+
+          // row 2.6
+          "<div class='row row-border'>" +
+          "<div class='col-6'>" +
+          "Past ET Potential:" +
+          "</div>" +
+          "<div class='col-6'>" +
+          f.past_et_likelihood +
+          "</div>" +
+          "</div>" +
+          // end row 2.6
+
+          "</div>" +
+          // end stats col
+
+          "</div>" +
+          // end row 2
+
+          // row 3
+          "<div class='row row-border'>" +
+          "<div class='col-12'>" +
+          f.blurb +
+          "</div>" +
+          "</div>"
+        // end row 3
+
+        // spacer n-1 check
         if (f.id != "Exoplanets") {
-          tbl += "<tr>" + "<td class='spacer'>" + "</td>" + "</tr>"
+          tbl +=
+
+            "<div class='row'>" +
+            "<div class='col spacer'>" +
+            "</div>" +
+            "</div>"
         }
-        $(tbl).appendTo("#content tbody");
+
+        $(tbl).appendTo("#content planets");
 
       });
 
@@ -125,18 +214,7 @@
   });
 </script>
 
-<script>
-  function goToID(id) {
-    // goToID() : scroll to element with the given ID
-
-    document.querySelector(id).scrollIntoView({
-      behavior: 'smooth'
-    });
-  }
-</script>
-
-
-
+<!-- collapse navbar onclick -->
 <script>
   $(document).ready(function () {
     $("nav").find("li").on("click", "a", function () {
