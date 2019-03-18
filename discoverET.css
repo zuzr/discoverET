@@ -52,10 +52,6 @@ img {
   max-width: 100%;
 }
 
-.img-container {
-  max-height: 30%;
-}
-
 .row {
   padding: 1em;
   align-items: center;
@@ -126,14 +122,5 @@ img {
   .body-text {
     font-weight: 300;
     font-size: 22px;
-  }
-}
-
-@keyframes Spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
   }
 }
