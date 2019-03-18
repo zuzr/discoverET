@@ -73,6 +73,7 @@ img {
 
 .btn {
   margin: 1em;
+  margin-left: 0;
 }
 
 /* put at bottom after adding welcome page */

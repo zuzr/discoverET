@@ -2,7 +2,7 @@
   "content": [
     {
       "id": "Sun",
-      "name": "The Sun",
+      "name": "THE SUN",
       "image": "./images/Sun.png",
       "distance": "149",
       "volume": "960,000",
@@ -15,7 +15,7 @@
     },
     {
       "id": "Mercury",
-      "name": "Mercury",
+      "name": "MERCURY",
       "image": "./images/Mercury.png",
       "distance": "92",
       "volume": "0.07",
@@ -28,7 +28,7 @@
     },
     {
       "id": "Venus",
-      "name": "Venus",
+      "name": "VENUS",
       "image": "./images/Venus.png",
       "distance": "41",
       "volume": "0.85",
@@ -41,7 +41,7 @@
     },
     {
       "id": "Earth",
-      "name": "Earth",
+      "name": "EARTH",
       "image": "./images/Earth.png",
       "distance": "0",
       "volume": "1",
@@ -54,7 +54,7 @@
     },
     {
       "id": "Mars",
-      "name": "Mars",
+      "name": "MARS",
       "image": "./images/Mars.png",
       "distance": "78",
       "volume": "0.53",
@@ -67,7 +67,7 @@
     },
     {
       "id": "Ceres",
-      "name": "Ceres",
+      "name": "CERES",
       "image": "./images/Ceres.png",
       "distance": "270",
       "volume": "0.0005",
@@ -80,7 +80,7 @@
     },
     {
       "id": "Jupiter",
-      "name": "Jupiter",
+      "name": "JUPITER",
       "image": "./images/Jupiter.png",
       "distance": "629",
       "volume": "1320",
@@ -93,7 +93,7 @@
     },
     {
       "id": "Ganymede",
-      "name": "Ganymede",
+      "name": "GANYMEDE",
       "image": "./images/Ganymede.png",
       "distance": "629",
       "volume": "0.08",
@@ -106,7 +106,7 @@
     },
     {
       "id": "Europa",
-      "name": "Europa",
+      "name": "EUROPA",
       "image": "./images/Europa.png",
       "distance": "629",
       "volume": "0.02",
@@ -119,7 +119,7 @@
     },
     {
       "id": "Saturn",
-      "name": "Saturn",
+      "name": "SATURN",
       "image": "./images/Saturn.png",
       "distance": "1275",
       "volume": "763",
@@ -132,7 +132,7 @@
     },
     {
       "id": "Titan",
-      "name": "Titan",
+      "name": "TITAN",
       "image": "./images/Titan.png",
       "distance": "1275",
       "volume": "0.07",
@@ -145,7 +145,7 @@
     },
     {
       "id": "Enceladus",
-      "name": "Enceladus",
+      "name": "ENCELADUS",
       "image": "./images/Enceladus.png",
       "distance": "1275",
       "volume": "0.00007",
@@ -158,7 +158,7 @@
     },
     {
       "id": "Uranus",
-      "name": "Uranus",
+      "name": "URANUS",
       "image": "./images/Uranus.png",
       "distance": "2724",
       "volume": "64",
@@ -171,7 +171,7 @@
     },
     {
       "id": "Neptune",
-      "name": "Neptune",
+      "name": "NEPTUNE",
       "image": "./images/Neptune.png",
       "distance": "4351",
       "volume": "60",
@@ -184,7 +184,7 @@
     },
     {
       "id": "Pluto",
-      "name": "Pluto",
+      "name": "PLUTO",
       "image": "./images/Pluto.png",
       "distance": "5130",
       "volume": "0.006",
@@ -197,7 +197,7 @@
     },
     {
       "id": "Exoplanets",
-      "name": "Exoplanets",
+      "name": "EXOPLANETS",
       "image": "./images/Exoplanets.png",
       "distance": "N/A",
       "volume": "N/A",
