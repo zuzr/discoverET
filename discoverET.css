@@ -71,6 +71,10 @@ img {
   color: #f8f8ff;
 }
 
+.btn {
+  margin: 1em;
+}
+
 /* put at bottom after adding welcome page */
 .spacer {
   height: 100em;
@@ -80,6 +84,7 @@ img {
 @media only screen and (max-width: 400px) {
   .jumbotron {
     margin-top: 4em;
+    padding-top: 0 !important;
   }
   .title {
     padding-top: 2em;

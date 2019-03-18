@@ -46,7 +46,7 @@
     <container class="main-container">
       <content>
         <div class="jumbotron">
-          <h1 class="title">Welcome to DiscoverET</h1>
+          <h1 class="title">WELCOME, EARTHLING!</h1>
           <p class="body-text">There is a wealth of scientific evidence that
             suggests we are not alone in the universe. This website explores our
             very own solar system through the lense of the ExtraTerrestrial (ET)
@@ -207,11 +207,15 @@
 
           // row 3
           "<div class='row row-border'>" +
-          "<div class='col-12'>" +
+          "<div class='col-xs-12 col-sm-10'>" +
           f.blurb +
           "</div>" +
+
+          "<div class='col-xs-12 col-sm-2' align='center'>" +
+          "<button class='btn body-text'>" +
+          "<a href='" + f.link + "'>Learn More</a>" +
+          "</button>" +
           "</div>"
-        // end row 3
 
         // spacer n-1 check
         if (f.id != "Exoplanets") {
